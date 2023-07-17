@@ -19,7 +19,7 @@ CREATE TABLE "Publication" (
     "published" BOOLEAN NOT NULL DEFAULT false,
     "socialMedia" TEXT NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "dateToPublish" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "dateToPublish" TEXT NOT NULL,
 
     CONSTRAINT "Publication_pkey" PRIMARY KEY ("id")
 );

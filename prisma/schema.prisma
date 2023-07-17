@@ -1,3 +1,6 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
 generator client {
   provider = "prisma-client-js"
 }
@@ -23,8 +26,9 @@ model Publication {
   user          User     @relation(fields: [userId], references: [id])
   image         String
   title         String
+  text          String
   published     Boolean  @default(false)
   socialMedia   String
   createdAt     DateTime @default(now())
-  dateToPublish DateTime @default(now())
+  dateToPublish String
 }
